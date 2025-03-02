@@ -1,6 +1,6 @@
 package;
 
-class Disclaimer extends Spatial
+class Disclaimer
 
 function _process(delta):
 	if Player.left_hand_trigger_just_pressed || Player.right_hand_trigger_just_pressed:
