@@ -1,3 +1,5 @@
+package;
+
 class Height_Adjuster
 
 var height_text = $Height_Adjuster_VP/Height_Text
