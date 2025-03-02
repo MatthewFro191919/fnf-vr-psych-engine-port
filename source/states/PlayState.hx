@@ -1898,12 +1898,12 @@ class PlayState extends MusicBeatState
 		var newPercent:Null<Float> = FlxMath.remapToRange(FlxMath.bound(healthBar.valueFunction(), healthBar.bounds.min, healthBar.bounds.max), healthBar.bounds.min, healthBar.bounds.max, 0, 100);
 		healthBar.percent = (newPercent != null ? newPercent : 0);
 
-		iconP1.animation.curAnim.curFrame = (healthBar.percent < 20) ? 4 : 0;
-		iconP2.animation.curAnim.curFrame = (healthBar.percent > 80) ? 4 : 0;
-		iconP1.animation.curAnim.curFrame = (healthBar.percent < 20 && healthBar.percent < 40) ? 1 : 3;
-		iconP2.animation.curAnim.curFrame = (healthBar.percent > 60 && healthBar.percent > 80) ? 1 : 3;
-		iconP1.animation.curAnim.curFrame = (healthBar.percent < 20 && healthBar.percent < 40) ? 2 : 2;
-		iconP2.animation.curAnim.curFrame = (healthBar.percent > 40 && healthBar.percent > 60) ? 2 : 2;
+		iconP1.animation.curAnim.curFrame = (healthBar.percent < 20 && healthBar.percent > 80) ? 4 : 0;
+		iconP2.animation.curAnim.curFrame = (healthBar.percent > 80 && healthBar.percent < 20) ? 4 : 0;
+		iconP1.animation.curAnim.curFrame = (healthBar.percent < 40 && healthBar.percent > 80) ? 1 : 3;
+		iconP2.animation.curAnim.curFrame = (healthBar.percent > 80 && healthBar.percent < 40) ? 1 : 3;
+		iconP1.animation.curAnim.curFrame = (healthBar.percent < 40 && healthBar.percent > 60) ? 2 : 2;
+		iconP2.animation.curAnim.curFrame = (healthBar.percent > 60 && healthBar.percent < 40) ? 2 : 2;
 		return health;
 	}
 
