@@ -88,7 +88,6 @@
 	<SubTexture name="BF idle dance0011" x="700" y="2800" width="700" height="700" frameX="0" frameY="225" frameWidth="700" frameHeight="700"/>
 	<SubTexture name="BF idle dance0012" x="700" y="2800" width="700" height="700" frameX="0" frameY="225" frameWidth="700" frameHeight="700"/>
 	<SubTexture name="BF idle dance0013" x="700" y="2800" width="700" height="700" frameX="0" frameY="225" frameWidth="700" frameHeight="700"/>
-	
 	<SubTexture name="BF NOTE DOWN MISS0000" x="2800" y="700" width="700" height="700" frameX="5" frameY="255" frameWidth="700" frameHeight="700"/>
 	<SubTexture name="BF NOTE DOWN MISS0001" x="2800" y="700" width="700" height="700" frameX="5" frameY="255" frameWidth="700" frameHeight="700"/>
 	<SubTexture name="BF NOTE DOWN MISS0002" x="2800" y="1400" width="700" height="700" frameX="5" frameY="255" frameWidth="700" frameHeight="700"/>
