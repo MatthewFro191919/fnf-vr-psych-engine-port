@@ -22,11 +22,11 @@ class HealthIcon extends FlxSprite
 			setPosition(sprTracker.x + sprTracker.width + 12, sprTracker.y - 30);
 	}
 
-	private var iconOffsets:Array<Float> = [0, 0];
+	private var iconOffsets:Array<Float> = [0, 0, 0, 0, 0];
 	public function changeIcon(char:String, ?allowGPU:Bool = true) {
 		if(this.char != char) {
-			var name:String = 'healthicons/' + char;
-			if(!Paths.fileExists('images/healthicons/' + name  + '-iconGrid' + '.png', IMAGE)) name = 'char'; //Older versions of psych engine's support
+			var name:String = 'icons/' + char;
+			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + char; //Older versions of psych engine's support
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
 			
 			var graphic = Paths.image(name, allowGPU);
@@ -40,7 +40,10 @@ class HealthIcon extends FlxSprite
 			animation.play(char);
 			this.char = char;
 
-			antialiasing = ClientPrefs.data.antialiasing;
+			if(char.endsWith('-pixel'))
+				antialiasing = false;
+			else
+				antialiasing = ClientPrefs.data.antialiasing;
 		}
 	}
 
